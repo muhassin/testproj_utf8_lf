@@ -1,0 +1,5 @@
+*.iml
+/.idea/**
+!**/testproj_utf8_lf.iml
+!/.idea/encodings.xml
+target/

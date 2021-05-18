@@ -1,0 +1,11 @@
+# Default to auto-detection and normalization when going out
+* text=auto
+
+# No normalization or conversion for files that should use Windows newlines.
+# This only stops conversion to LF when going out, and doesn't help if something
+# has already changed to LF.  .editorconfig and IDE is needed for making them CRLF.
+*.bat -text
+/src/win/** -text
+
+# Example for files to be handled as binary; actual entries to be added if found necessary.
+*.ps binary

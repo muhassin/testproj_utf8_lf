@@ -1,0 +1,36 @@
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines and UTF-8 by default
+# NOT enforcing indent or final newline in general
+[*]
+charset = utf-8
+end_of_line = lf
+
+[*.properties]
+charset = latin1
+
+# Code files
+[*.{java,js,py,groovy}]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+# NOT setting max_line_length, due to IDEs/editors being really crap with auto-formatting multiple lines
+
+# Exceptions
+# Windows stuff
+# Can not set charset CP1252 due to lack of support in .editorconfig, so relying on IDE settings for that.
+[*.bat]
+charset = unset
+end_of_line = crlf
+
+[src/win/**]
+charset = unset
+end_of_line = crlf
+
+[src/win/latin1*]
+charset = latin1
+
+[src/win/utf8*]
+charset = utf-8
